@@ -23,27 +23,20 @@ CHILEAUTOS-QA-AUTOMATION *POR ANGHEL TELLO*
  - npm install mochawesome-merge --save-dev
 
 ## Usage
--  Para ejecutar se pueden guir con lo siguiente
---- Comando para ejecucion con UI de cypress ---
-npx cypress open
---- Comando para ejecucion por CMD ---
--- Completo --
-npx cypress run
--- Por modulo --
-npx cypress run --spec "cypress/e2e/home/homePageTest.cy.js"
-npx cypress run --spec "cypress/e2e/publish/anuncioVentaTest.cy.js"
-npx cypress run --spec "cypress/e2e/search/searchByFiltroTest.cy.js"
+-  Para ejecutar se pueden seguir con lo siguiente
+# Comando para ejecucion con UI de cypress
+
+- npx cypress open
+
+# Comando para ejecucion por CMD 
+# Completo 
+- npx cypress run
+# Por modulo 
+- npx cypress run --spec "cypress/e2e/home/homePageTest.cy.js"
+- npx cypress run --spec "cypress/e2e/publish/anuncioVentaTest.cy.js"
+- npx cypress run --spec "cypress/e2e/search/searchByFiltroTest.cy.js"
 
 NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Pero dentro de lo que hay se visualizar distintas tecnicas y usos de Cypress.
-
-       Spec                                              Tests  Passing  Failing  Pending  Skipped
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ ×  home/homePageTest.cy.js                  00:56        7        6        1        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ √  publish/anuncioVentaTest.cy.js           01:30        4        4        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ×  search/searchByFiltroTest.cy.js          00:38        1        -        1        -        - │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpetas de screenshoots y reporte, en caso de que se ejecute el full run si se desea ver todo en un reporte unificado ejecutar los comandos 
 
@@ -58,6 +51,7 @@ IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpe
 ## License
 Generado por *@AnghelTello* / El uso de este codigo es solo para usos educativos y de presentacion de Demo para Chileautos.cl
 
+## Parte 1 (Respuestas)
 
 1. Estrategia de Testing 
 a) Basándote en el homepage de Chileautos.cl, identifica y prioriza los 5 flujos críticos que consideras más importantes para automatizar. Justifica tu selección desde una perspectiva de negocio y riesgo. 
