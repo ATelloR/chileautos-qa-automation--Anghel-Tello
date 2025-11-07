@@ -15,9 +15,9 @@ CHILEAUTOS-QA-AUTOMATION *POR ANGHEL TELLO*
 ## Installation
 Iniciar Visual Studio Code
 1. Clonar repo:
-   git init
-   git clone --branch master https://github.com/ATelloR/chileautos-qa-automation--Anghel-Tello.git
-   cd chileautos-qa-automation--Anghel-Tello
+   - git init
+   - git clone --branch master https://github.com/ATelloR/chileautos-qa-automation--Anghel-Tello.git
+   - cd chileautos-qa-automation--Anghel-Tello
 2. Instalar dependencies:
  - npm install cypress --save-dev
  - npm install --save-dev cypress-mochawesome-reporter
