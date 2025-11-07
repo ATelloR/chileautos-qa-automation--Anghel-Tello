@@ -1,0 +1,13 @@
+{
+  "Suzuki_Swift_2018": {
+    "estado": "Usado",
+    "tipo" : "Auto",
+    "marca": "Suzuki",
+    "modelo": "Swift",
+    "anno": "2018",
+    "transmicion": "Automática",
+    "segmento": "Hatchback",
+    "combustible": "Bencina",
+    "insignia": "GLX"
+  }
+}
