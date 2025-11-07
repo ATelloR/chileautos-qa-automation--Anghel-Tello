@@ -13,8 +13,11 @@ CHILEAUTOS-QA-AUTOMATION *POR ANGHEL TELLO*
 | **Google Chrome o Edge** | Última versión      | Navegadores soportados para ejecución de pruebas |
 
 ## Installation
+Iniciar Visual Studio Code
 1. Clonar repo:
-   git clone https://your.repo.url/project-name.git
+   git init
+   git clone --branch master https://github.com/ATelloR/chileautos-qa-automation--Anghel-Tello.git
+   cd chileautos-qa-automation--Anghel-Tello
 2. Instalar dependencies:
  - npm install cypress --save-dev
  - npm install --save-dev cypress-mochawesome-reporter
@@ -36,7 +39,7 @@ CHILEAUTOS-QA-AUTOMATION *POR ANGHEL TELLO*
 - npx cypress run --spec "cypress/e2e/publish/anuncioVentaTest.cy.js"
 - npx cypress run --spec "cypress/e2e/search/searchByFiltroTest.cy.js"
 
-NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Pero dentro de lo que hay se visualizar distintas tecnicas y usos de Cypress.
+NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Los principales flujos que se automotizaron son la pagina de inicio (barra de busqueda) y crear anuncio, este llega previo ingreso de usuario, esto para evitar generar publicaciones falsas en la pagina dado a que no es una ambiente de prueba. Si bien no muchos casos, creo que cumplen en demostrar los usos y tecnicas que se pueden emplear.
 
 IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpetas de screenshoots y reporte, en caso de que se ejecute el full run si se desea ver todo en un reporte unificado ejecutar los comandos 
 
