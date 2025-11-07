@@ -26,15 +26,14 @@ Iniciar Visual Studio Code
  - npm install mochawesome-merge --save-dev
 
 ## Usage
--  Para ejecutar se pueden seguir con lo siguiente
-# Comando para ejecucion con UI de cypress
 
+## Comando para ejecucion completa con UI de cypress
 - npx cypress open
 
-# Comando para ejecucion por CMD 
-# Completo 
+# Comandos para ejecucion por CMD 
+1. Completo 
 - npx cypress run
-# Por modulo 
+2. Por modulo 
 - npx cypress run --spec "cypress/e2e/home/homePageTest.cy.js"
 - npx cypress run --spec "cypress/e2e/publish/anuncioVentaTest.cy.js"
 - npx cypress run --spec "cypress/e2e/search/searchByFiltroTest.cy.js"
