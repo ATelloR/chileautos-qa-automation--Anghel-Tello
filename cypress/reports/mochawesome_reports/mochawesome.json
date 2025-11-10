@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-10T05:55:11.970Z",
+    "end": "2025-11-10T05:56:56.512Z",
+    "duration": 104542,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d96e7c9-7741-4b7b-ba46-19d56593dea8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\publish\\anuncioVentaTest.cy.js",
+      "file": "cypress\\e2e\\publish\\anuncioVentaTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "147c206a-5c97-4af8-8cc9-b7f5e8ba41df",
+          "title": "Pruebas de publicación de anuncio de venta de vehículo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar navegación a página de publicación de anuncio de venta",
+              "fullTitle": "Pruebas de publicación de anuncio de venta de vehículo Validar navegación a página de publicación de anuncio de venta",
+              "timedOut": null,
+              "duration": 20526,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nlet contador_ss = 1;\n//Inicio de flujo de prueba\nhomePage.irPaginaPublicarVehiculo();\nanuncioVentaPage.seleccionarTipoVehiculo(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacionVisible(vehiculoPrueba, vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\ncy.screenshot(rutaScreenshot, {\n  overwrite: true\n});",
+              "err": {},
+              "uuid": "789147e5-ce7d-41dd-a8c7-278ac5eb1a2b",
+              "parentUUID": "147c206a-5c97-4af8-8cc9-b7f5e8ba41df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crear una publicacion",
+              "fullTitle": "Pruebas de publicación de anuncio de venta de vehículo Crear una publicacion",
+              "timedOut": null,
+              "duration": 35075,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nlet contador_ss = 1;\n//Pre inicio de flujo de creacion de publicacion\nhomePage.irPaginaPublicarVehiculo();\nanuncioVentaPage.seleccionarTipoVehiculo(vehiculoPrueba);\n//Flujo completo de creacion de publicacion\nanuncioVentaPage.crearPublicacion_marca(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_modelo(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_anno(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_transmicion(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_segmento(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_combustible(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_insignia(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.validar_coincidencias_vehiculos_encontrados(rutaScreenshot + '_' + contador_ss++);",
+              "err": {},
+              "uuid": "40604c54-73b7-4866-9230-2fe9ac1f7ea6",
+              "parentUUID": "147c206a-5c97-4af8-8cc9-b7f5e8ba41df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar campo de seleccion de marca, impida continuar flujo y solicita seleccionar una marca de la lista",
+              "fullTitle": "Pruebas de publicación de anuncio de venta de vehículo Validar campo de seleccion de marca, impida continuar flujo y solicita seleccionar una marca de la lista",
+              "timedOut": null,
+              "duration": 21732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nlet contador_ss = 1;\n///Inicio de flujo de creacion de publicacion\nhomePage.irPaginaPublicarVehiculo();\nanuncioVentaPage.seleccionarTipoVehiculo(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.validarCamposObligatoriosDropdowns(rutaScreenshot);",
+              "err": {},
+              "uuid": "8b2a90be-1cf9-43e3-9b0f-f63fe0e34f1f",
+              "parentUUID": "147c206a-5c97-4af8-8cc9-b7f5e8ba41df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar campo de seleccion de modelo, impida continuar flujo y solicita seleccionar un modelo de la lista",
+              "fullTitle": "Pruebas de publicación de anuncio de venta de vehículo Validar campo de seleccion de modelo, impida continuar flujo y solicita seleccionar un modelo de la lista",
+              "timedOut": null,
+              "duration": 24441,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nlet contador_ss = 1;\n//Inicio de flujo de creacion de publicacion\nhomePage.irPaginaPublicarVehiculo();\nanuncioVentaPage.seleccionarTipoVehiculo(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.crearPublicacion_marca(vehiculoPrueba, rutaScreenshot + '_' + contador_ss++);\nanuncioVentaPage.validarCamposObligatoriosDropdowns(rutaScreenshot);",
+              "err": {},
+              "uuid": "8a71329b-cf54-4e04-af07-6702a924a753",
+              "parentUUID": "147c206a-5c97-4af8-8cc9-b7f5e8ba41df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "789147e5-ce7d-41dd-a8c7-278ac5eb1a2b",
+            "40604c54-73b7-4866-9230-2fe9ac1f7ea6",
+            "8b2a90be-1cf9-43e3-9b0f-f63fe0e34f1f",
+            "8a71329b-cf54-4e04-af07-6702a924a753"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 101774,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome_reports",
+        "overwrite": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

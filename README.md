@@ -38,7 +38,7 @@ Iniciar Visual Studio Code
 - npx cypress run --spec "cypress/e2e/publish/anuncioVentaTest.cy.js"
 - npx cypress run --spec "cypress/e2e/search/searchByFiltroTest.cy.js"
 
-NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Los principales flujos que se automotizaron son la pagina de inicio (barra de busqueda) y crear anuncio, este llega previo ingreso de usuario, esto para evitar generar publicaciones falsas en la pagina dado a que no es una ambiente de prueba. Si bien no son muchos casos en la demo, en mi opinion que cumplen en demostrar los usos y tecnicas que se pueden emplear.
+NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Los principales flujos que se automotizaron son la pagina de inicio (barra de busqueda) y crear anuncio, este llega previo ingreso de usuario, esto para evitar generar publicaciones falsas en la pagina dado a que no es una ambiente de prueba. En caso de revisar el codigo, en ciertos puntos se entregan justificaciones para ciertas deciciones tomadas.
 
 IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpetas de screenshoots y reporte, en caso de que se ejecute el full run si se desea ver todo en un reporte unificado ejecutar los comandos 
 
@@ -50,8 +50,24 @@ IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpe
 ## Configuration
 - En caso de descargar el proyecto por carpeta copiando esta a una ruta de tu gusto, y utilizando Visual Studio Code, abre el proyecto con > Open Folder
 
+## Troubleshooting
+
+| Problema                       | Causa probable               | Solución                                            |
+| ------------------------------ | ---------------------------- | --------------------------------------------------- |
+| Cypress no abre                | Versión de Node incompatible | Verificar con `node -v`                             |
+| Fallo al instalar dependencias | Conflictos en npm            | Ejecutar `npm cache clean --force`                  |
+| Selectores no encontrados      | Cambios en el DOM            | Actualizar localizadores en archivo de página       |
+| Reporte vacío                  | Archivos JSON faltantes      | Repetir ejecución con flag `--reporter mochawesome` |
+
+## AUTOR
+
+Anghel Tello Rishmague
+Rol: Analista QA / Automatización
+Tecnologías: Cypress, JavaScript, Node.js, Mochawesome, Jenkins
+Año: 2025
+
 ## License
-Generado por *@AnghelTello* / El uso de este codigo es solo para usos educativos y de presentacion de Demo para Chileautos.cl
+El uso de este codigo es solo para usos educativos y de presentación de Demo para Chileautos.cl
 
 ## Parte 1 (Respuestas)
 

@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-10T05:56:57.832Z",
+    "end": "2025-11-10T05:57:53.452Z",
+    "duration": 55620,
+    "testsRegistered": 7,
+    "passPercent": 85.71428571428571,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9ee57e5b-a137-48ea-8a55-24d575f91c66",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home\\homePageTest.cy.js",
+      "file": "cypress\\e2e\\home\\homePageTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+          "title": "Pruebas en pagina principal del sitio",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Barrido de existencia de elementos basicos en la pagina principal",
+              "fullTitle": "Pruebas en pagina principal del sitio Barrido de existencia de elementos basicos en la pagina principal",
+              "timedOut": null,
+              "duration": 8607,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\nhomePage.headerVisible();\nhomePage.barraBusquedaVisible();\nhomePage.seccion_hoy_visible();\nhomePage.seccion_tipos_auto_visible();\nhomePage.seccion_noticias_visible();\nhomePage.seccion_showroom_visible();\nhomePage.seccion_test_drive_visible();\ncy.screenshot(rutaScreenshot, {\n  overwrite: true\n});",
+              "err": {},
+              "uuid": "ce543cdc-8934-4ab8-af6a-e998df71e50c",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por tipo de auto - usado",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por tipo de auto - usado",
+              "timedOut": null,
+              "duration": 3682,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nconst tipo_auto = 'Usado';\nhomePage.buscar_por_tipo_auto(tipo_auto);\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot);\n//Se comenta la parte de submit y validación de URL dado a que el entorno inicia protección captcha\n//homePage.submit_busqueda();\n//cy.url().should('include', `/${tipo_auto}`);",
+              "err": {},
+              "uuid": "9df3d3ca-455c-4506-b3d4-080b151d3a2f",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por tipo de auto - nuevo",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por tipo de auto - nuevo",
+              "timedOut": null,
+              "duration": 3087,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nconst tipo_auto = 'Nuevo';\nhomePage.buscar_por_tipo_auto(tipo_auto);\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot);\n//Se comenta la parte de submit y validación de URL dado a que el entorno inicia protección captcha\n//homePage.submit_busqueda();\n//cy.url().should('include', `/${tipo_auto}`);",
+              "err": {},
+              "uuid": "0152da94-6a2d-44bb-8e91-9851985b5c20",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por tipo de auto - sin parametro",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por tipo de auto - sin parametro",
+              "timedOut": null,
+              "duration": 12999,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nconst tipo_auto = '123';\nhomePage.buscar_por_tipo_auto(tipo_auto);\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot);\n//Se comenta la parte de submit y validación de URL dado a que el entorno inicia protección captcha\n//homePage.submit_busqueda();\n//cy.url().should('include', `/${tipo_auto}`);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: '/^123$/g' within the element: <div#mantine-5cwta0a6e.bt07uzg> but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: '/^123$/g' within the element: <div#mantine-5cwta0a6e.bt07uzg> but never did.\n    at HomePage.buscar_por_tipo_auto (webpack://chileautos-qa-automation/./cypress/pages/homePage.js:54:40)\n    at Context.eval (webpack://chileautos-qa-automation/./cypress/e2e/home/homePageTest.cy.js:59:17)",
+                "diff": null
+              },
+              "uuid": "80b8c699-783a-4844-a8b3-01e374db4131",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por Marca",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por Marca",
+              "timedOut": null,
+              "duration": 3541,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nconst marca = 'Suzuki';\nhomePage.buscar_por_marca_auto(marca);\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot);\n//Se comenta la parte de submit y validación de URL dado a que el entorno inicia protección captcha\n//homePage.submit_busqueda();\n//cy.url().should('include', `/${marca}`);",
+              "err": {},
+              "uuid": "5e987a66-a59a-4a85-b8a8-2591cd9dc46e",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por marca y modelo",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por marca y modelo",
+              "timedOut": null,
+              "duration": 4242,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nlet contador_ss = 1;\nconst marca = 'Suzuki';\nconst modelo = 'Swift';\n//una validacion extra para asegurar que el elemento de modelo este disable hasta seleccionar marca\nhomePage.selector_tipo_modelo_disable();\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot + '_' + contador_ss++);\n//inicio de flujo\nhomePage.buscar_por_marca_auto(marca);\nhomePage.buscar_por_modelo_auto(modelo);\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot + '_' + contador_ss++);",
+              "err": {},
+              "uuid": "d6025d41-5b48-4b1e-be80-37b8038b89d7",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación de funcionalidad de barra de búsqueda por uso, marca, modelo y Palabra Clave",
+              "fullTitle": "Pruebas en pagina principal del sitio Validación de funcionalidad de barra de búsqueda por uso, marca, modelo y Palabra Clave",
+              "timedOut": null,
+              "duration": 6048,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//configurando ruta de screenshot con estructura de carpetas\nconst rutaScreenshot = this.test.parent.title + '/' + this.test.title;\n//Inicializando variables\nconst tipo_auto = 'Usado';\nconst marca = 'Suzuki';\nconst modelo = 'Swift';\n//inicio de flujo\nhomePage.funcion_guardado_vehiculos_encontrados_btn_buscar('valorInicialBusqueda'); //guardando valor inicial de vehiculos encontrados\nhomePage.buscar_por_tipo_auto(tipo_auto);\ncy.wait(500); //espera para evitar fallos en dropdown\nhomePage.buscar_por_marca_auto(marca);\nhomePage.buscar_por_modelo_auto(modelo);\nhomePage.buscar_por_palabra_clave('manual');\ncy.wait(1000); //espera para cargar bien el valor antes de la captura\nhomePage.funcion_guardado_vehiculos_encontrados_btn_buscar('valorFinalBusqueda'); //guardando valor final de vehiculos encontrados\n//Validación de que la cantidad de vehiculos encontrados haya disminuido con los filtros aplicados\ncy.get('@valorInicialBusqueda').then(inicial => {\n  cy.get('@valorFinalBusqueda').then(final => {\n    expect(parseInt(final[0].replace(/[,\\.]/g, ''))).to.be.lessThan(parseInt(inicial[0].replace(/[,\\.]/g, '')));\n  });\n});\nhomePage.tomar_screenshot_barrabusqueda(rutaScreenshot);",
+              "err": {},
+              "uuid": "aabbf450-1188-4b57-a644-41154b2b9f7c",
+              "parentUUID": "3d001e57-4cea-4ef1-99a1-c71a380d2be1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce543cdc-8934-4ab8-af6a-e998df71e50c",
+            "9df3d3ca-455c-4506-b3d4-080b151d3a2f",
+            "0152da94-6a2d-44bb-8e91-9851985b5c20",
+            "5e987a66-a59a-4a85-b8a8-2591cd9dc46e",
+            "d6025d41-5b48-4b1e-be80-37b8038b89d7",
+            "aabbf450-1188-4b57-a644-41154b2b9f7c"
+          ],
+          "failures": [
+            "80b8c699-783a-4844-a8b3-01e374db4131"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 42206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome_reports",
+        "overwrite": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

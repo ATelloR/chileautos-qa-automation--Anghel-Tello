@@ -7,9 +7,14 @@ const vehiculoPrueba = 'Suzuki_Swift_2018';
 
 describe('Pruebas de publicación de anuncio de venta de vehículo', () => {
 
-    //Debido a que las pruebas involucran la creación de publicaciones,
-    //se recomienda ejecutar estas pruebas en un entorno de pruebas o con una cuenta dedicada a testing, pero debido a que la pagina entregada no recorre el flujo completo de publicación,
-    //se decidió ejecutar en el dominio de chileautos.cl, per sin publicar realmente los anuncios.
+    // Debido a que las pruebas involucran la creación de publicaciones, 
+    // y la pagina es utilizada por los usuarios finales se decide llegar hasta final del flujo de ingreso de anuncio previo log in t sin publicar realmente los anuncios,
+    // se recomienda ejecutar estas pruebas en un entorno de pruebas o con una cuenta dedicada a testing,
+    // Adicionalmente se decide ejecutar en el dominio de chileautos.cl (hardcodeado), dado a que cypress no maneja de manera dinamica los cambios de origenes (url), para 
+    // la identifación de elementos y screenshoots estos fallan y generan errores, esto solucionable actualizando el origen por cada elemento pero eso implica generar una solución que
+    // o si bien que de todas maneras se ingrese la url(harcodeada) o tomar la url al ingresar a la pantalla de "Generar un anuncio" y guardarla, pero esto podria afectar 
+    // la usabilidad del codigo y adicionalmente no seria capas de detectar errores de actualizacion entre ambientes porque podria ocurrir en que se generen diferencias entre los #href
+    // de todas maneras en el Page de anuncioVenta deje comentado un pequeño ejemplo de como se podria implementar.
 
     beforeEach(() => {
         cy.visit('https://www.chileautos.cl/');

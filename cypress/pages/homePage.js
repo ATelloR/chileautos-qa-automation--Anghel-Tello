@@ -100,7 +100,7 @@ export class HomePage {
 
     irPaginaPublicarVehiculo(){
         cy.get(HEADER_OPT).eq(1).click();
-        cy.get(HEADER_SLIDER).eq(1).contains('Publicar mi vehículo').click(); 
+        cy.get(HEADER_SLIDER).eq(1).contains('Publicar mi vehículo').click();
     }
 
     irPaginaLogIn() {

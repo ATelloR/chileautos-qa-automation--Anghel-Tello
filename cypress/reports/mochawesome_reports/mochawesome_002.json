@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-10T05:57:54.448Z",
+    "end": "2025-11-10T05:58:35.763Z",
+    "duration": 41315,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "78fd7150-6127-4d86-88f4-ae0cf6f475aa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\search\\searchByFiltroTest.cy.js",
+      "file": "cypress\\e2e\\search\\searchByFiltroTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8bc41a6f-c0f1-4394-98bc-ddca50192373",
+          "title": "Pruebas de busqueda por selector de filtros",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Busqueda por filtro de vehiculo por marca",
+              "fullTitle": "Pruebas de busqueda por selector de filtros Busqueda por filtro de vehiculo por marca",
+              "timedOut": null,
+              "duration": 18962,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.irPaginaCompra_Todos();\nsearchByFiltroPage.selecionarMarcaFiltro('Suzuki');\n//Validación de que la URL contenga el filtro aplicado\ncy.contains('Ir').first().click();\ncy.url().should('include', 'suzuki');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-aspect=\"Marca\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-aspect=\"Marca\"]`, but never found it.\n    at SearchByFiltroPage.selecionarMarcaFiltro (webpack://chileautos-qa-automation/./cypress/pages/searchByFiltroPage.js:10:11)\n    at Context.eval (webpack://chileautos-qa-automation/./cypress/e2e/search/searchByFiltroTest.cy.js:14:27)",
+                "diff": null
+              },
+              "uuid": "37e55f9f-d3b9-42b5-a0de-9b09bac76673",
+              "parentUUID": "8bc41a6f-c0f1-4394-98bc-ddca50192373",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "37e55f9f-d3b9-42b5-a0de-9b09bac76673"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome_reports",
+        "overwrite": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

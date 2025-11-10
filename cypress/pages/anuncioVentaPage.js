@@ -22,6 +22,17 @@ export class AnuncioVentaPage {
     
     //Seleccionar tipo de vehiculo para la publicacion
     seleccionarTipoVehiculo(vehiculo, ssData){
+        
+        //Pequeño ejemplo de como se podria utilizar url y origin para solucionar el problema de elementos orignes
+        //let newUrl;
+        // cy.url().then((urlStr) => {
+        //     newUrl = urlStr;
+        //         cy.origin(newUrl, (ssData) => {
+        //         cy.wait(1500);
+        //         cy.screenshot(ssData, {overwrite: true});
+        //     })
+        // });
+ 
         cy.fixture('vehiculos').then((datosVehiculo) =>{
              const datos = datosVehiculo[vehiculo];
              cy.screenshot(ssData, {overwrite: true});
