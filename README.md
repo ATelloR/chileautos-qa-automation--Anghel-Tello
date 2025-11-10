@@ -45,7 +45,7 @@ IMPORTANTE: Las ejecuciones por comando estan configuradas para limpiar las carp
 -  npm run merge:reports
 -  npm run generate:html
 
-* Ya hay scripts para ejecuciones por pipeline configuradas, en caso de querer usarlas usarlas por separado dado a que si tu computador no soporta los comandos ingresados por chain, solo se ejecutara el primero, o puede generar errores
+PD: Ya hay scripts para ejecuciones por pipeline configuradas, en caso de querer usarlas, sin embargo debido a que ciertass funcionalidades de los comandos no funcionan dependiendo de la shell que se utilice en tu pc, no se recomiendan utilizar (Ejemplo &&).
 
 ## Configuration
 - En caso de descargar el proyecto por carpeta copiando esta a una ruta de tu gusto, y utilizando Visual Studio Code, abre el proyecto con > Open Folder
@@ -147,20 +147,23 @@ Tiempo medio de resolución (MTTR).
 
 a) Estructura de carpetas (Cypress)
 
-cypress/
-  ├─ e2e/
-  │   ├─ home/
-  │   ├─ publish/
-  │   └─ search/
-  ├─ fixtures/
-  ├─ pages/
-  ├─ reports/
-  ├─ screenshots/
-  └─ support/
-  │    ├─ commands.js
-  │    └─ e2e.js
-  ├── cypress.config.js
-  └── package.json
+| Estructura                       |
+| -------------------------------- |
+|  cypress/                        |
+|    ├─ e2e/                       |
+|    │   ├─ home/                  |
+|    │   ├─ publish/               |
+|    │   └─ search/                |
+|    ├─ fixtures/                  |
+|    ├─ pages/                     |
+|    ├─ reports/                   |
+|    ├─ screenshots/               |
+|    └─ support/                   |
+|    │    ├─ commands.js           |
+|    │    └─ e2e.js                |
+|    ├── cypress.config.js         |
+|    └── package.json              |
+|                                  |
 
 Justificación:
 Se separan los test cases, objetos de página y datos para favorecer la mantenibilidad, modularidad y CI/CD.
