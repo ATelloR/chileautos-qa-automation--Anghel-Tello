@@ -40,7 +40,7 @@ Iniciar Visual Studio Code
 
 NOTA: Son en total 12 casos de pruebas, de los 2 estan visualizados que fallen, en Filtro y pagina de Inicio. Importante denotar que dado que la pagina de Chileautos.cl tiene bloqueos de robotización hay ciertas pantallas imposibles de llegar y automatizar. Los principales flujos que se automotizaron son la pagina de inicio (barra de busqueda) y crear anuncio, este llega previo ingreso de usuario, esto para evitar generar publicaciones falsas en la pagina dado a que no es una ambiente de prueba. En caso de revisar el codigo, en ciertos puntos se entregan justificaciones para ciertas deciciones tomadas.
 
-IMPORTANTE: Las ejecuciones por comando estan cofiguradas para limpiar las carpetas de screenshoots y reporte, en caso de que se ejecute el full run si se desea ver todo en un reporte unificado ejecutar los comandos 
+IMPORTANTE: Las ejecuciones por comando estan configuradas para limpiar las carpetas de screenshoots y reporte, en caso de que se ejecute el full run si se desea ver todo en un reporte unificado ejecutar los comandos 
 
 -  npm run merge:reports
 -  npm run generate:html
